@@ -1,0 +1,40 @@
+.burger {
+  top: 1.8rem;
+  left: 0.75rem;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+}
+
+.burger > .bun {
+  width: 2.5rem;
+  height: 0.35rem;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  position: absolute;
+}
+
+.burger .bun {
+  transition: all 0.2s;
+}
+
+.burger > .bun:first-child {
+  top: -0.6rem;
+}
+
+.burger > .bun:last-child {
+  top: 0.6rem;
+}
+
+.burger.active .bun:first-child {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger.active .bun:last-child {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger.active .bun:nth-child(2) {
+  display: none;
+}

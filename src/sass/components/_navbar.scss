@@ -1,0 +1,46 @@
+.navbar {
+  font-size: var(--font-default);
+  background-color: var(--color-primary-light);
+  width: calc(100vw - 4rem);
+  position: absolute;
+  top: 0;
+  left: calc(-100vw + 4rem);
+  transition: transform 0.2s ease-in-out, opacity 0.2s 0.1s;
+  text-align: center;
+  padding: 2.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+
+  & ul {
+    list-style: none;
+
+    & a:link,
+    & a:visited {
+      color: var(--color-white);
+      text-decoration: none;
+    }
+  }
+
+  &.active {
+    transform: translateX(100vw);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  & .menu-item {
+    padding: 1rem 0;
+    width: 70%;
+    margin: 0 auto;
+
+    &:last-child {
+      border-top: 1px solid #fff;
+      margin-top: 1rem;
+      padding-top: 2rem;
+    }
+  }
+
+  .sub-menu {
+    display: none;
+  }
+}
