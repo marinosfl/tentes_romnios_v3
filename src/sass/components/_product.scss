@@ -1,0 +1,39 @@
+.product {
+  width: calc(100vw - 4rem);
+  height: calc((100vh - 11rem) / 3);
+  background-color: gray;
+  transition: transform 0.2s;
+
+  &:first-child {
+    background-color: orangered;
+  }
+
+  &:last-child {
+    background-color: yellowgreen;
+  }
+
+  &__top-img {
+    width: calc(100vw - 4rem);
+    height: calc((100vh - 11rem) / 3);
+  }
+
+  &__categories {
+    width: calc(100vw - 4rem);
+    height: calc(((100vh - 11rem) / 3) * 2);
+    background-color: blue;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 2s ease-in;
+  }
+
+  &.active {
+    transform: translateY(var(--product-active));
+
+    & .product__categories {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

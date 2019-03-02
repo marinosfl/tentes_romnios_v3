@@ -15,7 +15,21 @@
         </nav>
     </aside>
     <main class="main">
-
+        <div class="product">
+            <h2 class="product__title">ΤΕΝΤΕΣ</h2>
+            <div class="product__top-img"></div>
+            <div class="product__categories">1</div>
+        </div>
+        <div class="product">
+            <h2 class="product__title">ΠΕΡΓΚΟΛΕΣ</h2>
+            <div class="product__top-img"></div>
+            <div class="product__categories">2</div>
+        </div>
+        <div class="product">
+            <h2 class="product__title">ΕΙΔΙΚΕς ΚΑΤΑΣΚΕΥΕΣ</h2>
+            <div class="product__top-img"></div>
+            <div class="product__categories">3</div>
+        </div>
     </main>
 </div>
 
