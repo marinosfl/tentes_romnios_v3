@@ -1,3 +1,4 @@
+// burger
 const burger = document.querySelector('.burger');
 const navbarMobile = document.querySelector('.navbar');
 
@@ -6,6 +7,7 @@ burger.addEventListener('click', e => {
   navbarMobile.classList.toggle('active');
 });
 
+// expand product animation
 const product = $('.product');
 
 product.on('click', e => {
@@ -34,3 +36,11 @@ function checkProduct(target) {
     root.style.setProperty('--product-active', height);
   }
 }
+
+// back arrow in active product
+const arrowBack = $('.product__description--title > i');
+
+arrowBack.on('click', e => {
+  e.stopPropagation();
+  product.removeClass('active');
+});
