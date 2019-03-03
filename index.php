@@ -1,34 +1,102 @@
 <?php get_header(); ?>
 <div class="content-wrapper">
-    <aside class="sidebar">
-        <div class="burger">
-            <span class="bun"></span>
-            <span class="bun"></span>
-            <span class="bun"></span>
-        </div>
-        <div class="sidebar__icon-box">
-            <div class="sidebar__icon"><i class="fas fa-phone"></i></div>
-            <div class="sidebar__icon"><i class="fas fa-envelope"></i></div>
-        </div>
-        <nav class="navbar" role="navigation">
-            <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
-        </nav>
-    </aside>
+    <?php include('sidebar.php'); ?>
     <main class="main">
         <div class="product">
-            <h2 class="product__title">ΤΕΝΤΕΣ</h2>
-            <div class="product__top-img"></div>
-            <div class="product__categories">1</div>
+            <div class="product__top-img">
+                <h2 class="product__title">ΤΕΝΤΕΣ</h2>
+                <div class="product__description">
+                    <h2 class="product__description--title">
+                        <i class="fas fa-angle-left"></i>
+                        <span>ΤΕΝΤΕΣ</span>
+                    </h2>
+                    <p class="product__description--content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, incidunt. Lorem, ipsum dolor.
+                    </p>
+                </div>
+            </div>
+            <div class="product__categories">
+                <a href="https://cpdev.crowdpolicy.com/marinos_tentes/tentes_tax/antirida/" class="product__category">
+                    <h2 class="product__category--title">ΑΝΤΙΡΙΔΑ</h2>
+                </a>
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΚΑΘΕΤΗ</h2>
+                </a>
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΒΡΑΧΙΟΝΑ</h2>
+                </a>
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΚΑΣΕΤΙΝΑ</h2>
+                </a>
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΚΟΥΡΜΠΕΣ</h2>
+                </a>
+            </div>
         </div>
         <div class="product">
-            <h2 class="product__title">ΠΕΡΓΚΟΛΕΣ</h2>
-            <div class="product__top-img"></div>
-            <div class="product__categories">2</div>
+            <div class="product__top-img">
+                <h2 class="product__title">ΠΕΡΓΚΟΛΕΣ</h2>
+                <div class="product__description">
+                    <h2 class="product__description--title">
+                        <i class="fas fa-angle-left"></i>
+                        <span>ΠΕΡΚΟΛΕΣ</span>
+                    </h2>
+                    <p class="product__description--content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, incidunt. Lorem, ipsum dolor.
+                    </p>
+                </div>
+
+            </div>
+            <div class="product__categories">
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΑΝΤΙΡΙΔΑ</h2>
+                </a>
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΚΑΘΕΤΗ</h2>
+
+                </a>
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΒΡΑΧΙΟΝΑ</h2>
+
+                </a>
+
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΚΟΥΡΜΠΕΣ</h2>
+                </a>
+            </div>
         </div>
         <div class="product">
-            <h2 class="product__title">ΕΙΔΙΚΕς ΚΑΤΑΣΚΕΥΕΣ</h2>
-            <div class="product__top-img"></div>
-            <div class="product__categories">3</div>
+            <div class="product__top-img">
+                <h2 class="product__title">ΕΙΔΙΚΕΣ ΚΑΤΑΣΚΕΥΕΣ</h2>
+                <div class="product__description">
+                    <h2 class="product__description--title">
+                        <i class="fas fa-angle-left"></i>
+                        <span>ΕΙΔΙΚΕΣ ΚΑΤΑΣΚΕΥΕΣ</span>
+                    </h2>
+                    <p class="product__description--content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, incidunt. Lorem, ipsum dolor.
+                    </p>
+                </div>
+            </div>
+            <div class="product__categories">
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΑΝΤΙΡΙΔΑ</h2>
+                </a>
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΚΑΘΕΤΗ</h2>
+
+                </a>
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΒΡΑΧΙΟΝΑ</h2>
+
+                </a>
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΚΑΣΕΤΙΝΑ</h2>
+                </a>
+                <a href="#!" class="product__category">
+                    <h2 class="product__category--title">ΚΟΥΡΜΠΕΣ</h2>
+                </a>
+            </div>
         </div>
     </main>
 </div>
