@@ -13,9 +13,18 @@ html {
 
 body {
   box-sizing: border-box;
-  overflow-y: hidden;
+  // overflow-y: hidden;
+
+  & * {
+    max-height: calc(((100vh - 11rem) / 3) * 6);
+  }
+}
+
+.main {
+  // max-height: calc(((100vh - 11rem) / 3) * 6);
 }
 
 .content-wrapper {
   display: flex;
+  overflow: hidden;
 }
