@@ -1,9 +1,10 @@
 .burger {
-  top: 1.8rem;
-  left: 0.75rem;
+  // top: 1.8rem;
+  // left: 0.75rem;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   z-index: 99;
+  height: 2rem;
 }
 
 .burger > .bun {
@@ -11,7 +12,7 @@
   height: 0.35rem;
   background-color: var(--color-white);
   border-radius: 4px;
-  position: absolute;
+  position: relative;
 }
 
 .burger .bun {
@@ -19,11 +20,11 @@
 }
 
 .burger > .bun:first-child {
-  top: -0.6rem;
+  top: -0.3rem;
 }
 
 .burger > .bun:last-child {
-  top: 0.6rem;
+  top: 0.3rem;
 }
 
 .burger.active .bun:first-child {
@@ -33,6 +34,7 @@
 .burger.active .bun:last-child {
   top: 0;
   transform: rotate(-45deg);
+  margin-top: -0.3rem;
 }
 
 .burger.active .bun:nth-child(2) {
