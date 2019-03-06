@@ -20,7 +20,7 @@
     }
 
     .swiper-container {
-      width: calc(100vw - 4rem);
+      width: var(--main-content-width);
       height: 100%;
     }
 
@@ -60,7 +60,7 @@
     }
 
     .swiper-container {
-      width: calc(100vw - 4rem);
+      width: var(--main-content-width);
       height: 100%;
     }
 

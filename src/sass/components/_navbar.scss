@@ -1,10 +1,10 @@
 .navbar {
   font-size: var(--font-default);
   background-color: var(--color-primary-light);
-  width: calc(100vw - 4rem);
+  width: var(--main-content-width);
   position: absolute;
   top: 0;
-  left: calc(-100vw + 4rem);
+  left: var(--main-content-width);
   transition: transform 0.2s ease-in-out, opacity 0.2s 0.1s;
   text-align: center;
   padding: 2.5rem 0;

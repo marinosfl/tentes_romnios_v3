@@ -1,5 +1,5 @@
 .product {
-  width: calc(100vw - 4rem);
+  width: var(--main-content-width);
   min-height: calc((100vh - 11rem) / 3);
   background-color: gray;
   transition: transform 0.15s ease-in-out;
@@ -47,12 +47,12 @@
   }
 
   &__top-img {
-    width: calc(100vw - 4rem);
+    width: var(--main-content-width);
     height: calc((100vh - 11rem) / 3);
   }
 
   &__categories {
-    width: calc(100vw - 4rem);
+    width: var(--main-content-width);
     // height: calc(((100vh - 11rem) / 3) * 2);
     background-color: lightblue;
     display: none;
