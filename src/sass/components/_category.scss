@@ -1,0 +1,22 @@
+.category {
+  &--heading {
+    @include titleContainer();
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    & .item-heading {
+      margin-bottom: 0;
+      padding: 0.5rem;
+    }
+  }
+
+  &--images {
+    border-bottom: 2rem solid var(--color-primary-light);
+    // height: calc(50vh - 20rem);
+    height: 16rem;
+  }
+
+  &__active {
+    // height: 50vh;
+  }
+}
