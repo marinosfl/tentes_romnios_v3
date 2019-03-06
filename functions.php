@@ -24,6 +24,10 @@ function enqueue_styles_and_scripts()
 {
   // wp_enqueue_style('style', get_stylesheet_uri());
 
+  // Swiper slider
+  wp_enqueue_style('swiper_slider_css', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css');
+  wp_enqueue_script('swiper_slider_css', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js', array(), '4.5.5', true);
+
   // register webpack stylesheet and js with theme
   wp_enqueue_style('site_main_css', get_template_directory_uri() . '/build/css/main.min.css');
   wp_enqueue_script('site_main_js', get_template_directory_uri() . '/build/js/app.min.js', array(), '1.0.0', true);
@@ -131,4 +135,3 @@ function add_cors_http_header()
   header("Access-Control-Allow-Origin: *");
 }
 add_action('init', 'add_cors_http_header');
-
