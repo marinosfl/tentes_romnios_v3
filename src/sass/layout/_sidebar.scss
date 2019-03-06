@@ -1,6 +1,8 @@
 .sidebar {
   width: 4rem;
+  padding: 0 1rem;
   background-color: var(--color-primary);
+  min-height: 100vh;
 
   position: relative;
   z-index: 10;
