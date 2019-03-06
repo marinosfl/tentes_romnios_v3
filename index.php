@@ -6,7 +6,7 @@
             <div class="product__top-img">
                 <h2 class="product__title">ΤΕΝΤΕΣ</h2>
                 <div class="product__description">
-                    <h2 class="product__description--title">
+                    <h2 class="item-heading">
                         <i class="fas fa-angle-left"></i>
                         <span>ΤΕΝΤΕΣ</span>
                     </h2>
@@ -37,7 +37,7 @@
             <div class="product__top-img">
                 <h2 class="product__title">ΠΕΡΓΚΟΛΕΣ</h2>
                 <div class="product__description">
-                    <h2 class="product__description--title">
+                    <h2 class="item-heading">
                         <i class="fas fa-angle-left"></i>
                         <span>ΠΕΡΚΟΛΕΣ</span>
                     </h2>
@@ -69,7 +69,7 @@
             <div class="product__top-img">
                 <h2 class="product__title">ΕΙΔΙΚΕΣ ΚΑΤΑΣΚΕΥΕΣ</h2>
                 <div class="product__description">
-                    <h2 class="product__description--title">
+                    <h2 class="item-heading">
                         <i class="fas fa-angle-left"></i>
                         <span>ΕΙΔΙΚΕΣ ΚΑΤΑΣΚΕΥΕΣ</span>
                     </h2>
