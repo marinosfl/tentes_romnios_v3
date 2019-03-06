@@ -4,7 +4,7 @@
   width: var(--main-content-width);
   position: absolute;
   top: 0;
-  left: var(--main-content-width);
+  left: calc(-100vw + 4.5rem);
   transition: transform 0.2s ease-in-out, opacity 0.2s 0.1s;
   text-align: center;
   padding: 2.5rem 0;
