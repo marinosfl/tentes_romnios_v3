@@ -2,7 +2,7 @@
   width: 4rem;
   padding: 0 1rem;
   background-color: var(--color-primary);
-  min-height: 100vh;
+  min-height: calc(100vh - 11rem);
 
   position: relative;
   z-index: 10;
