@@ -15,4 +15,8 @@
     // height: calc(50vh - 20rem);
     height: 16rem;
   }
+
+  &__active {
+    height: calc(100vh - 40rem);
+  }
 }

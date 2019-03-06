@@ -50,13 +50,15 @@ arrowBack.on('click', e => {
 $(document).ready(function() {
   const swiper = new Swiper('.category--images > .swiper-container', {
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+      nextEl: '.category--images > .swiper-container  > .swiper-button-next',
+      prevEl: '.category--images > .swiper-container > .swiper-button-prev'
     },
+
     slidesPerView: 5.6,
     centeredSlides: true,
     spaceBetween: 2,
     loop: true,
+
     // slidesPerView: 'auto',
     // keyboardControl: true,
     // centeredSlides: true,
@@ -91,7 +93,16 @@ $(document).ready(function() {
 
   const swiper2 = new Swiper('.category__active > .swiper-container', {
     loop: true,
-    slidesPerView: 1
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.category__active > .swiper-container  > .swiper-button-next',
+      prevEl: '.category__active > .swiper-container > .swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      paginationClickable: true,
+      type: 'bullets'
+    }
   });
 
   // var swiper = new Swiper('.swiper-container', {

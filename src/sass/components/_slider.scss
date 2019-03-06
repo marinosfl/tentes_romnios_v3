@@ -63,5 +63,10 @@
       width: calc(100vw - 4rem);
       height: 100%;
     }
+
+    .swiper-pagination {
+      position: fixed;
+      cursor: pointer;
+    }
   }
 }

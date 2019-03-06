@@ -36,17 +36,20 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/5.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/3.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/5.jpg" alt="">
                     </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/5.jpg" alt="">
-                    </div>
-
                 </div>
 
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <div class="swiper-pagination"></div>
             </div>
         </div>
 </div>
