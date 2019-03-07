@@ -3,3 +3,34 @@
   text-align: center;
   padding: 2.5rem 2rem;
 }
+
+// MEDIA QUERY MANAGER
+/*
+  0 - 600px: Phone
+  600px - 900px: Tablet portait
+  900px - 1200px: Tablet landscape
+  [1200px - 1800px] : normal styles apply
+  1800px + : Big desktop
+  
+$breakpoint agrument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + Typography > general layout + grid > page layout > components
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop {
+    // 1024px
+    @media only screen and (min-width: 64em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-big {
+    @media only screen and (min-width: 90em) {
+      @content;
+    }
+  }
+}
