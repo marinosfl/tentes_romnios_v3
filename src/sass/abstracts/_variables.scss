@@ -20,9 +20,17 @@
   --font-heading-main: 3.6rem;
   --font-heading-sub: 3rem;
 
-  // Height
+  // Translate
   --product-active: 0;
+
+  // Height
+  --product-height: calc((100vh - 11rem) / 3);
 
   // Width
   --main-content-width: calc(100vw - 4.5rem);
+
+  @include respond(desktop) {
+    --product-height: calc(100vh / 3);
+    --main-content-width: calc(100vw - 25rem);
+  }
 }
