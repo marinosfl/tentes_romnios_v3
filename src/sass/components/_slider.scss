@@ -50,8 +50,8 @@
       text-align: center;
 
       & img {
-        width: 80%;
-        height: auto;
+        width: auto;
+        height: 100%;
       }
     }
 
@@ -67,6 +67,11 @@
     .swiper-pagination {
       position: fixed;
       cursor: pointer;
+      left: 2rem;
+
+      @include respond(desktop) {
+        left: 10rem;
+      }
     }
   }
 }
