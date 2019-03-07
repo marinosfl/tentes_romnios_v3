@@ -3,22 +3,61 @@
   padding: 0 1rem;
   background-color: var(--color-primary);
   min-height: calc(100vh - 11rem);
-
   position: relative;
   z-index: 10;
+
+  & hr {
+    display: none;
+    width: 4rem;
+    margin: 0 auto;
+    border: 1px solid var(--color-primary-light);
+
+    @include respond(desktop) {
+      display: block;
+    }
+  }
+
+  @include respond(desktop) {
+    width: 25rem;
+    min-height: 100vh;
+  }
 
   &__icon-box {
     position: relative;
     top: 5rem;
     text-align: center;
+
+    @include respond(desktop) {
+      display: none;
+    }
   }
 
   &__icon {
     font-size: 2rem;
     color: var(--color-white);
+    transition: all 0.2s ease;
 
     &:not(:last-child) {
       margin-bottom: 2rem;
+    }
+
+    &.active .fa-phone {
+      transform: rotate(180deg);
+    }
+  }
+
+  & .header__text-box {
+    display: none;
+  }
+
+  @include respond(desktop) {
+    & .header {
+      height: auto;
+      padding: 4rem 0;
+    }
+
+    & .header__text-box {
+      display: block;
     }
   }
 }

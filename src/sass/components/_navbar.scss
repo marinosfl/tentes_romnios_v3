@@ -12,6 +12,10 @@
   visibility: hidden;
   will-change: transform, opacity;
 
+  @include respond(desktop) {
+    padding: 4rem 0;
+  }
+
   & ul {
     list-style: none;
 
@@ -34,13 +38,22 @@
     margin: 0 auto;
 
     &:last-child {
-      border-top: 1px solid #fff;
-      margin-top: 1rem;
-      padding-top: 2rem;
+      border-top: 1px solid var(--color-primary);
+      border-bottom: 1px solid var(--color-primary);
+      margin-top: 3rem;
+      padding: 2rem;
     }
   }
 
   .sub-menu {
     display: none;
+  }
+
+  @include respond(desktop) {
+    position: initial;
+    background-color: transparent;
+    width: auto;
+    opacity: 1;
+    visibility: visible;
   }
 }

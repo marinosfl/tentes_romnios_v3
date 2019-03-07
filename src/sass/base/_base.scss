@@ -9,6 +9,10 @@
 
 html {
   font-size: 62.5%;
+
+  @include respond(desktop-big) {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -19,6 +23,10 @@ body {
 
   & * {
     max-height: calc(((100vh - 11rem) / 3) * 6);
+
+    @include respond(desktop) {
+      max-height: calc((100vh / 3) * 6);
+    }
   }
 }
 

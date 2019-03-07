@@ -1,6 +1,6 @@
 .product {
   width: var(--main-content-width);
-  min-height: calc((100vh - 11rem) / 3);
+  min-height: var(--product-height);
   background-color: gray;
   transition: transform 0.15s ease-in-out;
 
@@ -48,7 +48,7 @@
 
   &__top-img {
     width: var(--main-content-width);
-    height: calc((100vh - 11rem) / 3);
+    height: var(--product-height);
   }
 
   &__categories {
@@ -62,7 +62,7 @@
   }
 
   &__category {
-    height: calc((100vh - 11rem) / 3);
+    height: var(--product-height);
     display: block;
     text-decoration: none;
 
