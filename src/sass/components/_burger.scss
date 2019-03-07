@@ -12,7 +12,7 @@
   height: 0.35rem;
   background-color: var(--color-white);
   border-radius: 4px;
-  position: relative;
+  position: absolute;
 }
 
 .burger .bun {
@@ -20,15 +20,15 @@
 }
 
 .burger > .bun:first-child {
-  top: -0.3rem;
+  top: -0.6rem;
 }
 
 .burger > .bun:last-child {
-  top: 0.3rem;
+  top: 0.6rem;
 }
 
 .burger.active .bun:first-child {
-  top: 0;
+  top: -0.3rem;
   transform: rotate(45deg);
 }
 .burger.active .bun:last-child {
