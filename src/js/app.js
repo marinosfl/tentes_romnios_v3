@@ -9,6 +9,17 @@ burger.addEventListener('click', e => {
   navbarMobile.classList.toggle('active');
 });
 
+// const burger = $('.burger');
+// const phone = $('.sidebar__icon .fa-phone');
+// const sidebarIcons = $('.sidebar__icon');
+// const navbarMobile = $('.navbar');
+
+// sidebarIcons.on('click', () => {
+//   sidebarIcons.toggleClass('active');
+//   phone.toggleClass('active');
+//   navbarMobile.toggleClass('active');
+// });
+
 // expand product animation
 const product = $('.product');
 
