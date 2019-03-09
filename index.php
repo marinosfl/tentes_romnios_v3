@@ -7,7 +7,8 @@
                 <h2 class="product__title">ΤΕΝΤΕΣ</h2>
                 <div class="product__description">
                     <h2 class="item-heading">
-                        <i class="fas fa-angle-left"></i>
+                        <!-- <i class="fas fa-angle-left"></i> -->
+                        <i class="fas fa-angle-down"></i>
                         <span>ΤΕΝΤΕΣ</span>
                     </h2>
                     <p class="product__description--content">
@@ -35,10 +36,12 @@
         </div>
         <div class="product">
             <div class="product__top-img">
+                <div class="product__top-img--hover"></div>
                 <h2 class="product__title">ΠΕΡΓΚΟΛΕΣ</h2>
                 <div class="product__description">
                     <h2 class="item-heading">
-                        <i class="fas fa-angle-left"></i>
+                        <!-- <i class="fas fa-angle-left"></i> -->
+                        <i class="fas fa-angle-down"></i>
                         <span>ΠΕΡΚΟΛΕΣ</span>
                     </h2>
                     <p class="product__description--content">
@@ -67,10 +70,12 @@
         </div>
         <div class="product">
             <div class="product__top-img">
+                <div class="product__top-img--hover"></div>
                 <h2 class="product__title">ΕΙΔΙΚΕΣ ΚΑΤΑΣΚΕΥΕΣ</h2>
                 <div class="product__description">
                     <h2 class="item-heading">
-                        <i class="fas fa-angle-left"></i>
+                        <!-- <i class="fas fa-angle-left"></i> -->
+                        <i class="fas fa-angle-down"></i>
                         <span>ΕΙΔΙΚΕΣ ΚΑΤΑΣΚΕΥΕΣ</span>
                     </h2>
                     <p class="product__description--content">

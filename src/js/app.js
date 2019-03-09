@@ -29,6 +29,18 @@ product.on('click', e => {
   checkProduct(target);
   product.removeClass('active');
   target.addClass('active');
+
+  // adding event listener on back arrow after a product has been chosen so it doesnt overwrite product's click event
+  const arrowBack = $(
+    '.product.active .product__description > .item-heading > i'
+  );
+
+  arrowBack.on('click', e => {
+    e.stopPropagation();
+    product.removeClass('active');
+    //unbinding arrow's event listener so product's click event is active on the arrow 
+    arrowBack.unbind('click');
+  });
 });
 
 function checkProduct(target) {
@@ -51,12 +63,6 @@ function checkProduct(target) {
 }
 
 // back arrow in active product
-const arrowBack = $('.product__description > .item-heading > i');
-
-arrowBack.on('click', e => {
-  e.stopPropagation();
-  product.removeClass('active');
-});
 
 $(document).ready(function() {
   const swiper = new Swiper('.category--images > .swiper-container', {
