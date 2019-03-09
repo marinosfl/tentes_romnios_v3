@@ -46,8 +46,12 @@
     }
   }
 
-  & .header__text-box {
-    display: none;
+  & .header {
+    height: auto;
+
+    &__text-box {
+      display: none;
+    }
   }
 
   @include respond(desktop) {
