@@ -42,7 +42,10 @@
       border-top: 1px solid var(--color-primary);
       border-bottom: 1px solid var(--color-primary);
       margin-top: 3rem;
-      padding: 2rem;
+
+      @include respond(desktop) {
+        padding-bottom: 5rem;
+      }
     }
   }
 
