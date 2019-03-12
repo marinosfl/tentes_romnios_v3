@@ -25,6 +25,7 @@
 
   // Height
   --product-height: calc((100vh - 11rem) / 3);
+  --max-height: calc(var(--product-height) * 5 + 11rem + 12rem);
 
   // Width
   --main-content-width: calc(100vw - 4.5rem);

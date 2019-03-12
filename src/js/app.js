@@ -38,7 +38,7 @@ product.on('click', e => {
   arrowBack.on('click', e => {
     e.stopPropagation();
     product.removeClass('active');
-    //unbinding arrow's event listener so product's click event is active on the arrow 
+    //unbinding arrow's event listener so product's click event is active on the arrow
     arrowBack.unbind('click');
   });
 });
@@ -53,12 +53,37 @@ function checkProduct(target) {
 
   if (target[0] == first[0]) {
     root.style.setProperty('--product-active', 0);
+    setMaxHeight('first');
   } else if (target[0] == second[0]) {
     const height = '-' + productHeight + 'px';
     root.style.setProperty('--product-active', height);
+    setMaxHeight('second');
   } else if (target[0] == third[0]) {
     const height = '-' + productHeight * 2 + 'px';
     root.style.setProperty('--product-active', height);
+  }
+}
+
+function checkWindowWidth() {
+  return $(window).width();
+}
+
+function setMaxHeight(activeProduct) {
+  const windowWidth = checkWindowWidth();
+  const root = document.documentElement;
+
+  if (activeProduct === 'first') {
+    if (windowWidth >= 1024) {
+      root.style.setProperty('--max-height', 'calc(4 * (100vh / 3))');
+    } else {
+      root.style.setProperty('--max-height', 'calc(20rem * 5 + 12rem');
+    }
+  } else if (activeProduct === 'second') {
+    if (windowWidth >= 1024) {
+      root.style.setProperty('--max-height', 'calc(3 * (100vh / 3))');
+    } else {
+      root.style.setProperty('--max-height', 'calc(20rem * 4 + 12rem');
+    }
   }
 }
 

@@ -22,10 +22,12 @@ body {
   background-color: var(--color-primary-light);
 
   & * {
-    max-height: calc(((100vh - 11rem) / 3) * 6);
+    // max-height: calc(((100vh - 11rem) / 3) * 6);
+    max-height: var(--max-height);
 
     @include respond(desktop) {
-      max-height: calc((100vh / 3) * 6);
+      // max-height: calc((100vh / 3) * 6);
+      max-height: var(--max-height);
     }
   }
 }
