@@ -1,5 +1,5 @@
 .product {
-  width: var(--main-content-width);
+  width: calc(var(--main-content-width) - 1.2rem);
   min-height: var(--product-height);
   transition: transform 0.15s ease-in-out;
   cursor: pointer;
@@ -9,6 +9,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    width: var(--main-content-width);
+    height: var(--product-height);
+    min-height: 12rem;
 
     &:hover {
       & .product__description {
@@ -99,20 +102,15 @@
     // }
   }
 
-  &__top-img {
-    width: var(--main-content-width);
-    height: var(--product-height);
-  }
-
   &__categories {
     width: var(--main-content-width);
-
+    background-color: var(--color-primary-light);
     display: none;
     transition: opacity 2s ease-in;
   }
 
   &__category {
-    height: var(--product-height);
+    height: 20rem;
     width: 100%;
     display: block;
     text-decoration: none;
@@ -148,6 +146,7 @@
 
     @include respond(desktop) {
       width: calc((100vw - 25rem) / 3);
+      height: var(--product-height);
 
       &:nth-child(odd) {
         margin-right: calc((100vw - 25rem) / 3);
@@ -278,6 +277,15 @@
 
   &.active {
     transform: translateY(var(--product-active));
+
+    & .product__top-img {
+      height: 12rem;
+
+      @include respond(desktop) {
+        // height: 15rem;
+        height: var(--product-height);
+      }
+    }
 
     & .product__categories {
       display: flex;
