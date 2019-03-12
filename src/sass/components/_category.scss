@@ -19,5 +19,9 @@
 
   &__active {
     height: calc(100vh - 40rem);
+
+    @include respond(desktop) {
+      height: calc(100vh - 28rem);
+    }
   }
 }
