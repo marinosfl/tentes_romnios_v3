@@ -76,13 +76,13 @@ function setMaxHeight(activeProduct) {
     if (windowWidth >= 1024) {
       root.style.setProperty('--max-height', 'calc(4 * (100vh / 3))');
     } else {
-      root.style.setProperty('--max-height', 'calc(20rem * 5 + 12rem');
+      root.style.setProperty('--max-height', 'calc(20rem * 3 + 12rem)');
     }
   } else if (activeProduct === 'second') {
     if (windowWidth >= 1024) {
       root.style.setProperty('--max-height', 'calc(3 * (100vh / 3))');
     } else {
-      root.style.setProperty('--max-height', 'calc(20rem * 4 + 12rem');
+      root.style.setProperty('--max-height', 'calc(20rem * 3 + 12rem');
     }
   }
 }
