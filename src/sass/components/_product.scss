@@ -89,6 +89,7 @@
       font-size: var(--font-default);
       flex: 1;
       margin-right: 6rem;
+      font-weight: 300;
 
       display: none;
 
@@ -299,6 +300,10 @@
     & .product__description {
       visibility: visible;
       opacity: 1;
+
+      & .item-heading {
+        flex-direction: row;
+      }
 
       // & .fa-angle-left {
       //   display: block;
