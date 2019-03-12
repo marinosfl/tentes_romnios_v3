@@ -1,11 +1,19 @@
 .sidebar {
   width: 5rem;
-  padding: 0 1rem;
   background-color: var(--color-primary);
   min-height: calc(100vh - 11rem);
-  position: relative;
-  position: relative;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+
+  &__fixed {
+    position: fixed;
+    width: 4.5rem;
+
+    @include respond(desktop) {
+      width: 25rem;
+    }
+  }
 
   & hr {
     display: none;
@@ -27,6 +35,7 @@
     position: relative;
     top: 5rem;
     text-align: center;
+    padding: 0 1rem;
 
     @include respond(desktop) {
       display: none;
