@@ -34,6 +34,7 @@ body {
 .breadcrumbs {
   font-size: 1.2rem;
   position: absolute;
-  top: 1rem;
-  left: 34%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1.5rem;
 }
