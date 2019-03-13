@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 
-const swiper = new Swiper('.category--images > .swiper-container', {
+export const topSwiper = new Swiper('.category--images > .swiper-container', {
   navigation: {
     nextEl: '.category--images > .swiper-container  > .swiper-button-next',
     prevEl: '.category--images > .swiper-container > .swiper-button-prev'
@@ -43,19 +43,22 @@ const swiper = new Swiper('.category--images > .swiper-container', {
   }
 });
 
-const swiper2 = new Swiper('.category__active > .swiper-container', {
-  loop: true,
-  slidesPerView: 1,
-  navigation: {
-    nextEl: '.category__active > .swiper-container  > .swiper-button-next',
-    prevEl: '.category__active > .swiper-container > .swiper-button-prev'
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    paginationClickable: true,
-    type: 'bullets'
+export const bottomSwiper = new Swiper(
+  '.category__active > .swiper-container',
+  {
+    loop: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.category__active > .swiper-container  > .swiper-button-next',
+      prevEl: '.category__active > .swiper-container > .swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      paginationClickable: true,
+      type: 'bullets'
+    }
   }
-});
+);
 
 // var swiper = new Swiper('.swiper-container', {
 //   slidesPerView: 5,
