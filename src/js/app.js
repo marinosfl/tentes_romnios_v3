@@ -50,8 +50,14 @@ product.on('click', e => {
 });
 
 // expand product animation on menu item click
-menuTentes.on('click', () => {
+menuTentes.on('click', e => {
+  // e.preventDefault();
+
   const { firstProduct } = elements;
+
+  const target = $(e.currentTarget);
+  $('.sub-menu').hide();
+  target.children('.sub-menu').show();
 
   product.removeClass('active');
   firstProduct.addClass('active');
@@ -61,8 +67,12 @@ menuTentes.on('click', () => {
   arrowBackListener();
 });
 
-menuPergoles.on('click', () => {
+menuPergoles.on('click', e => {
   const { secondProduct } = elements;
+
+  const target = $(e.currentTarget);
+  $('.sub-menu').hide();
+  target.children('.sub-menu').show();
 
   product.removeClass('active');
   secondProduct.addClass('active');

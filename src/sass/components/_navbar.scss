@@ -35,7 +35,7 @@
     box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.3);
   }
 
-  & .menu-item {
+  & #menu-main-menu > .menu-item {
     padding: 1rem 0;
     width: 70%;
     margin: 0 auto;
@@ -53,6 +53,16 @@
 
   .sub-menu {
     display: none;
+    font-size: var(--font-small);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 1rem 0;
+    width: 70%;
+    margin: 2rem auto 0;
+
+    & li {
+      margin: 0.5rem 0;
+    }
   }
 
   @include respond(desktop) {
