@@ -22,16 +22,7 @@ sidebarIcons.on('click', () => {
 // PRODUCT CONTROLLER //
 //********************//
 
-// expand product animation
-const { product } = elements;
-
-product.on('click', e => {
-  const target = $(e.currentTarget);
-  console.log('asda');
-  checkProduct(target);
-  product.removeClass('active');
-  target.addClass('active');
-
+const arrowBackListener = () => {
   // adding event listener on back arrow after a product has been chosen so it doesnt overwrite product's click event
   const arrowBack = $(
     '.product.active .product__description > .item-heading > i'
@@ -43,6 +34,42 @@ product.on('click', e => {
     //unbinding arrow's event listener so product's click event is active on the arrow
     arrowBack.unbind('click');
   });
+};
+
+// expand product animation
+const { product, menuTentes, menuPergoles, menuKataskeues } = elements;
+
+product.on('click', e => {
+  const target = $(e.currentTarget);
+  checkProduct(target);
+
+  product.removeClass('active');
+  target.addClass('active');
+
+  arrowBackListener();
+});
+
+// expand product animation on menu item click
+menuTentes.on('click', () => {
+  const { firstProduct } = elements;
+
+  product.removeClass('active');
+  firstProduct.addClass('active');
+
+  checkProduct(firstProduct);
+
+  arrowBackListener();
+});
+
+menuPergoles.on('click', () => {
+  const { secondProduct } = elements;
+
+  product.removeClass('active');
+  secondProduct.addClass('active');
+
+  checkProduct(secondProduct);
+
+  arrowBackListener();
 });
 
 //*********************//

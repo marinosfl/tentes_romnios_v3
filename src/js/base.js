@@ -5,5 +5,8 @@ export const elements = {
   product: $('.product'),
   firstProduct: $('.product:first-child'),
   secondProduct: $('.product:nth-child(2)'),
-  thirdProduct: $('.product:last-child')
+  thirdProduct: $('.product:last-child'),
+  menuTentes: $('.menu-tentes'),
+  menuPergoles: $('.menu-pergoles'),
+  menuKataskeues: $('.menu-kataskeues')
 };
