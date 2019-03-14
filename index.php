@@ -2,7 +2,7 @@
 <div class="content-wrapper">
     <?php include('sidebar.php'); ?>
     <main class="main">
-        <div class="product">
+        <div class="product product__tentes">
             <div class="product__top-img">
                 <h2 class="product__title">ΤΕΝΤΕΣ</h2>
                 <div class="product__description">
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="product__categories">
-                <a href="https://cpdev.crowdpolicy.com/marinos_tentes/tentes_tax/antirida/" class="product__category">
+                <!-- <a href="https://cpdev.crowdpolicy.com/marinos_tentes/tentes_tax/antirida/" class="product__category">
                     <h2 class="product__category--title">ΑΝΤΙΡΙΔΑ</h2>
                 </a>
                 <a href="#!" class="product__category">
@@ -31,10 +31,10 @@
                 </a>
                 <a href="#!" class="product__category">
                     <h2 class="product__category--title">ΚΟΥΡΜΠΕΣ</h2>
-                </a>
+                </a> -->
             </div>
         </div>
-        <div class="product">
+        <div class="product product__pergoles">
             <div class="product__top-img">
                 <div class="product__top-img--hover"></div>
                 <h2 class="product__title">ΠΕΡΓΚΟΛΕΣ</h2>
@@ -51,7 +51,7 @@
 
             </div>
             <div class="product__categories">
-                <a href="#!" class="product__category">
+                <!-- <a href="#!" class="product__category">
                     <h2 class="product__category--title">ΑΝΤΙΡΙΔΑ</h2>
                 </a>
                 <a href="#!" class="product__category">
@@ -65,7 +65,7 @@
 
                 <a href="#!" class="product__category">
                     <h2 class="product__category--title">ΚΟΥΡΜΠΕΣ</h2>
-                </a>
+                </a> -->
             </div>
         </div>
         <div class="product">
