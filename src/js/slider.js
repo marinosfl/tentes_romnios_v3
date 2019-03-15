@@ -10,6 +10,7 @@ export const topSwiper = new Swiper('.category--images > .swiper-container', {
   centeredSlides: true,
   spaceBetween: 2,
   loop: true,
+  slideToClickedSlide: true,
 
   // slidesPerView: 'auto',
   // keyboardControl: true,
