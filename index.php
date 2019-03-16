@@ -2,7 +2,7 @@
 <div class="content-wrapper">
     <?php include('sidebar.php'); ?>
     <main class="main">
-        <div class="product product__tentes">
+        <div class="product product__tentes" data-taxonomy="tentes_tax">
             <div class="product__top-img">
                 <h2 class="product__title">ΤΕΝΤΕΣ</h2>
                 <div class="product__description">
@@ -34,7 +34,7 @@
                 </a> -->
             </div>
         </div>
-        <div class="product product__pergoles">
+        <div class="product product__pergoles" data-taxonomy="pergoles_tax">
             <div class="product__top-img">
                 <div class="product__top-img--hover"></div>
                 <h2 class="product__title">ΠΕΡΓΚΟΛΕΣ</h2>
