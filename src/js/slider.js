@@ -11,6 +11,12 @@ export const topSwiper = new Swiper('.category--images > .swiper-container', {
   spaceBetween: 2,
   loop: true,
   slideToClickedSlide: true,
+  init: false,
+  // on: {
+  //   init: () => {
+  //     console.log('sda');
+  //   }
+  // },
 
   // slidesPerView: 'auto',
   // keyboardControl: true,
