@@ -1,8 +1,9 @@
 import { elements } from './base';
 import { checkProduct } from './views/productView';
 import { topSwiper, bottomSwiper } from './slider';
-import Category from './models/Category';
-import { renderTentesTerm, renderPergolesTerm } from './views/categoryView';
+import Terms from './models/Terms';
+import PostGallery from './models/PostGallery';
+import { renderTentesTerm, renderPergolesTerm } from './views/termsView';
 
 // global state of the app
 const state = {};
@@ -36,10 +37,31 @@ const arrowBackListener = () => {
   });
 };
 
+const fetchTerms = async () => {
+  const taxonomy = $('.product.active').data('taxonomy');
+  state.productTerms = new Terms();
+
+  try {
+    await state.productTerms.getTerms(taxonomy);
+  } catch (err) {
+    alert('somthing went wrong in fetchTerms');
+  }
+
+  console.log(state);
+
+  state.productTerms.terms.map(term => {
+    if (taxonomy === 'tentes_tax') {
+      renderTentesTerm(term);
+    } else if (taxonomy === 'pergoles_tax') {
+      renderPergolesTerm(term);
+    }
+  });
+};
+
 // expand product animation
 const { product, menuTentes, menuPergoles, menuKataskeues } = elements;
 
-product.on('click', e => {
+product.on('click', async e => {
   const target = $(e.currentTarget);
   checkProduct(target);
 
@@ -47,12 +69,11 @@ product.on('click', e => {
   target.addClass('active');
 
   arrowBackListener();
+  await fetchTerms();
 });
 
 // expand product animation on menu item click
 menuTentes.on('click', e => {
-  // e.preventDefault();
-
   const { firstProduct } = elements;
 
   const target = $(e.currentTarget);
@@ -64,7 +85,7 @@ menuTentes.on('click', e => {
 
   checkProduct(firstProduct);
 
-  arrowBackListener();
+  awaitarrowBackListener();
 });
 
 menuPergoles.on('click', e => {
@@ -82,44 +103,51 @@ menuPergoles.on('click', e => {
   arrowBackListener();
 });
 
-//*********************//
-// CATEGORY CONTROLLER //
-//*********************//
+//*******************//
+// SLIDER CONTROLLER //
+//*******************//
 
-const getPosts = async () => {
-  state.pergoles = new Category('pergoles', 'pergoles_tax');
+// Updating the bottom slider according to which slide is active on top slider
+const updateBottomSwiper = async () => {
+  // getting post type and post id from DOM elements
+  const postType = $('#post-type').data('post-type');
+  const postId = $('.category--images .swiper-slide-active').data('post-id');
 
-  state.tentes = new Category('tentes', 'tentes_tax');
+  // initiallizing new postGallery class in state
+  state.post = new PostGallery();
 
   try {
-    await state.tentes.getPosts();
-    await state.pergoles.getPosts();
-    // console.log(state);
-  } catch (err) {
-    alert('something went wrong in getPosts');
+    await state.post.getPostMeta(postType, postId);
+  } catch {
+    alert('something went wrong.. ');
   }
 
-  // isws na bgei ektos se diko tou function?
-  try {
-    await state.tentes.getTerms();
-    await state.pergoles.getTerms();
-    // console.log(state);
-  } catch (err) {
-    alert('somthing went wrong in getTerms');
+  const gallery = state.post.post.acf.gallery;
+  console.log(gallery);
+
+  // removing images of previous post
+  bottomSwiper.removeAllSlides();
+
+  // iterating new images and appending them to bottomSlider
+  if (gallery) {
+    gallery.forEach(meta => {
+      bottomSwiper.appendSlide(
+        `<div class="swiper-slide">
+        <img src="${meta.url}" alt="">
+      </div>`
+      );
+    });
   }
-
-  state.pergoles.terms.map(term => {
-    renderPergolesTerm(term);
-  });
-
-  state.tentes.terms.map(term => {
-    renderTentesTerm(term);
-  });
-
-  console.log(state);
-
-  // TODO na ftia3w to view twn terms tou category kai
-  // na to kanw render meso tou controller (kai tou model??)
+  // updaring bottom slider
+  bottomSwiper.update();
 };
 
-getPosts();
+// calling updateBottomSwiper on topSwiper init to get the gallery of the first post
+topSwiper.on('init', () => {
+  updateBottomSwiper();
+});
+// initializing swiper manually because auto initialization is turned of in order to be able to add event listener on 'init'
+topSwiper.init();
+
+// upading the gallery of shown post
+topSwiper.on('transitionEnd', updateBottomSwiper);
