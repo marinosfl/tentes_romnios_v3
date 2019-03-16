@@ -3,7 +3,9 @@ import { elements } from '../base';
 const createMarkup = term => {
   const markup = `<a href="${
     term.link
-  }" class="product__category" style="background-image:url(${term.acf.image});">
+  }" class="product__category" style="background-image:url(${
+    term.acf.image
+  });" data-term="${term.slug}">
                      <h2 class="product__category--title">${term.name}</h2>
                      <div class="product__category--content">
                       <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quo quasi minus quod!</p>
