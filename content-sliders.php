@@ -12,12 +12,12 @@
 
                 <?php
                 foreach ($posts as $post) {
-                  $image = get_the_post_thumbnail_url($post->ID);
-                  if ($image) {
-                    echo '<div class="swiper-slide" data-post-id="' . $post->ID . '">
+                    $image = get_the_post_thumbnail_url($post->ID);
+                    if ($image) {
+                        echo '<div class="swiper-slide" data-post-id="' . $post->ID . '">
                                      <img src="' . $image . '" alt="Post featured image">
                                  </div>';
-                  }
+                    }
                 }
                 ?>
 
