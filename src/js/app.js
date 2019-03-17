@@ -47,8 +47,6 @@ const fetchTerms = async () => {
     alert('somthing went wrong in fetchTerms');
   }
 
-  console.log(state);
-
   state.productTerms.terms.map(term => {
     if (taxonomy === 'tentes_tax') {
       renderTentesTerm(term);
@@ -62,17 +60,24 @@ const fetchTerms = async () => {
 const { product, menuTentes, menuPergoles, menuKataskeues } = elements;
 
 product.on('click', async e => {
-  const target = $(e.currentTarget);
-  checkProduct(target);
+  if ($(e.currentTarget).hasClass('product_kataskeues')) {
+    window.location.replace(
+      `${window.location.origin}${window.location.pathname}kataskeues`
+    );
+  } else {
+    const target = $(e.currentTarget);
+    checkProduct(target);
 
-  product.removeClass('active');
-  target.addClass('active');
+    product.removeClass('active');
+    target.addClass('active');
 
-  arrowBackListener();
-  await fetchTerms();
+    arrowBackListener();
+    await fetchTerms();
+  }
 });
 
 // expand product animation on menu item click
+// menu kataskeues is redirecting to post type archive (check wp-admin -> appearance -> menus)
 menuTentes.on('click', e => {
   const { firstProduct } = elements;
 
@@ -123,7 +128,6 @@ const updateBottomSwiper = async () => {
   }
 
   const gallery = state.post.post.acf.gallery;
-  console.log(gallery);
 
   // removing images of previous post
   bottomSwiper.removeAllSlides();
