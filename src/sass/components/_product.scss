@@ -322,7 +322,6 @@
       height: 12rem;
 
       @include respond(desktop) {
-        // height: 15rem;
         height: var(--product-height);
       }
     }
@@ -342,11 +341,8 @@
 
       & .item-heading {
         flex-direction: row;
+        justify-content: center;
       }
-
-      // & .fa-angle-left {
-      //   display: block;
-      // }
 
       & .fa-angle-down {
         transform: rotate(90deg);
