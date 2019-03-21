@@ -7,11 +7,12 @@
   justify-content: center;
 
   &__fixed {
-    position: fixed;
+    // position: fixed;
     width: 4.5rem;
 
     @include respond(desktop) {
       width: 25rem;
+      position: fixed;
     }
   }
 

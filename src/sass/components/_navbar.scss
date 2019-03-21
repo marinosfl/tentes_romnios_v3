@@ -11,8 +11,8 @@
   visibility: hidden;
   will-change: transform, opacity;
   min-height: 100vh;
-  top: -11rem;
-  padding-top: 11rem;
+  top: 0;
+  // padding-top: 11rem;
 
   @include respond(desktop) {
     padding: 4rem 0;
