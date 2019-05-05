@@ -8,5 +8,8 @@ export const elements = {
   thirdProduct: $('.product:last-child'),
   menuTentes: $('.menu-tentes'),
   menuPergoles: $('.menu-pergoles'),
-  menuKataskeues: $('.menu-kataskeues')
+  menuKataskeues: $('.menu-kataskeues'),
+  contactTabs: $('.stores__tab'),
+  contactTabsContent: $('.stores__tab--content'),
+  contactForm: $('#contact-form')
 };
