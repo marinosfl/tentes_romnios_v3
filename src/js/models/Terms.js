@@ -8,7 +8,7 @@ export default class Terms {
   async getTerms(taxonomy) {
     try {
       const res = await axios.get(
-        `https://cpdev.crowdpolicy.com/marinos_tentes/wp-json/wp/v2/${taxonomy}`
+        `http://159.69.107.6/romnios/wp-json/wp/v2/${taxonomy}`
       );
 
       this.terms = res.data;

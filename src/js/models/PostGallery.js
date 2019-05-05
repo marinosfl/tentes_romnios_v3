@@ -8,7 +8,7 @@ export default class PostGallery {
   async getPostMeta(postType, postId) {
     try {
       const res = await axios.get(
-        `https://cpdev.crowdpolicy.com/marinos_tentes/wp-json/wp/v2/${postType}/${postId}`
+        `http://159.69.107.6/romnios/wp-json/wp/v2/${postType}/${postId}`
       );
       this.post = res.data;
     } catch (err) {
