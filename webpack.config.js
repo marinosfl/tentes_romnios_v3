@@ -31,23 +31,43 @@ module.exports = {
         test: /\.(sass|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { url: false } },
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+              context: '../../'
+            }
+          },
           'sass-loader',
           'postcss-loader'
         ]
+      },
+      {
+        test: /\.(png|jpe?g|svg)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              name: 'img/[name].[ext]',
+              gifsicle: {
+                interlaned: false
+              },
+              optipng: {
+                optimizationLevel: 7
+              },
+              pngquant: {
+                quality: '65-90',
+                speed: 4
+              },
+              mozjpeg: {
+                progressive: true,
+                quality: 65
+              }
+            }
+          }
+        ]
       }
-      // {
-      //   test: /\.(png|jpe?g|svg)$/i,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         name: '[hash].[ext]',
-      //         outputPath: 'img/'
-      //       }
-      //     }
-      //   ]
-      // }
     ]
   },
   plugins: [

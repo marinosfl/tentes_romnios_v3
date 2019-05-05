@@ -28,11 +28,17 @@
       )
     );
 
+    $url = get_template_directory_uri();
+
     ?>
     <section class="category">
         <div class="category--heading">
             <h2 class="item-heading">
-                <a href="<?php echo home_url(); ?>"><i class="fas fa-angle-left"></i></a>
+                <a href="<?php echo home_url(); ?>">
+                    <svg class="recipe__meta--icon recipe__meta--empty-star">
+                        <use xlink:href="<?php echo $url ?>/img/icons_sprites.svg#arrow_left_l" />
+                    </svg>
+                </a>
                 <span id="post-type" data-post-type="<?php echo $post_type ?>"><?php echo $title ?></span>
             </h2>
         </div>
