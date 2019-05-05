@@ -1,0 +1,105 @@
+.contact {
+  max-width: 90rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+
+  &__title {
+    margin: 5rem 0 3rem;
+    font-size: var(--font-big);
+  }
+
+  &__content {
+    font-size: var(--font-small);
+    background-color: var(--color-primary);
+    padding: 2rem;
+
+    & p {
+      margin: 2rem 0;
+    }
+  }
+
+  &--info {
+    font-size: var(--font-small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+
+    &-wrapper {
+      width: 45%;
+    }
+  }
+
+  &--icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  &__form {
+    width: 60rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+
+    &--content {
+      padding: 3rem 6rem 4rem;
+      background-color: var(--color-primary);
+    }
+
+    &--col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    & label {
+      display: block;
+      text-align: left;
+      font-size: 1.2rem;
+    }
+
+    & .submit {
+      position: absolute;
+      bottom: -10px;
+      background-color: var(--color-primary-light);
+      border-color: var(--color-primary-light);
+      color: var(--color-white);
+      font-size: 1.2rem;
+      padding: 0.5rem;
+    }
+
+    & ::placeholder {
+      color: var(--color-white);
+      font-style: italic;
+    }
+  }
+
+  &--field {
+    width: 25rem;
+    height: 3rem;
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    border-color: var(--color-primary-light);
+
+    &-wrapper:first-of-type {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &--area {
+    height: 11rem;
+    padding-top: 0.5rem;
+  }
+
+  & hr {
+    border: 1px solid var(--color-primary-light);
+  }
+}

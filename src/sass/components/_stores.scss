@@ -1,0 +1,61 @@
+.stores {
+  &__tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: var(--font-small);
+
+    &--icon {
+      width: 5rem;
+      height: 3.5rem;
+
+      &:first-of-type {
+        margin-right: 0.5rem;
+      }
+
+      &:last-of-type {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  &__tab {
+    width: 40%;
+    background-color: var(--color-primary-light);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid var(--color-primary);
+    cursor: pointer;
+
+    &:first-of-type {
+      border-right: 2px solid var(--color-primary);
+      margin-right: auto;
+    }
+
+    &:last-of-type {
+      border-left: 2px solid var(--color-primary);
+    }
+
+    &.active {
+      background-color: var(--color-primary);
+    }
+
+    &--content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+
+      &-wrapper {
+        padding: 2rem;
+        background: var(--color-primary);
+      }
+    }
+  }
+}
