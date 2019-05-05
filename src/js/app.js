@@ -26,7 +26,7 @@ sidebarIcons.on('click', () => {
 const arrowBackListener = () => {
   // adding event listener on back arrow after a product has been chosen so it doesnt overwrite product's click event
   const arrowBack = $(
-    '.product.active .product__description > .item-heading > i'
+    '.product.active .product__description > .item-heading > svg'
   );
 
   arrowBack.on('click', e => {
@@ -78,7 +78,7 @@ product.on('click', async e => {
 
 // expand product animation on menu item click
 // menu kataskeues is redirecting to post type archive (check wp-admin -> appearance -> menus)
-menuTentes.on('click', e => {
+menuTentes.on('click', async e => {
   const { firstProduct } = elements;
 
   const target = $(e.currentTarget);
@@ -90,10 +90,17 @@ menuTentes.on('click', e => {
 
   checkProduct(firstProduct);
 
-  awaitarrowBackListener();
+  arrowBackListener();
+
+  if (
+    window.location.href === 'http://159.69.107.6/romnios/' ||
+    window.location.href === 'http://159.69.107.6/romnios//#!'
+  ) {
+    await fetchTerms();
+  }
 });
 
-menuPergoles.on('click', e => {
+menuPergoles.on('click', async e => {
   const { secondProduct } = elements;
 
   const target = $(e.currentTarget);
@@ -106,6 +113,13 @@ menuPergoles.on('click', e => {
   checkProduct(secondProduct);
 
   arrowBackListener();
+
+  if (
+    window.location.href === 'http://159.69.107.6/romnios/' ||
+    window.location.href === 'http://159.69.107.6/romnios//#!'
+  ) {
+    await fetchTerms();
+  }
 });
 
 //*******************//
@@ -155,3 +169,12 @@ topSwiper.init();
 
 // upading the gallery of shown post
 topSwiper.on('transitionEnd', updateBottomSwiper);
+
+//*******************//
+//  SERVICE WORKER   //
+//*******************//
+
+// Make sure sw are supported
+if ('serviceWorker' in navigator) {
+  console.log('sw working');
+}
