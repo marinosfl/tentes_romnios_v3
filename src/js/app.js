@@ -4,6 +4,7 @@ import { topSwiper, bottomSwiper } from './slider';
 import Terms from './models/Terms';
 import PostGallery from './models/PostGallery';
 import { renderTentesTerm, renderPergolesTerm } from './views/termsView';
+import './contactForm';
 
 // global state of the app
 const state = {};
@@ -120,6 +121,25 @@ menuPergoles.on('click', async e => {
   ) {
     await fetchTerms();
   }
+});
+
+//********************//
+//  CONTACT US TABS   //
+//********************//
+
+const { contactTabs, contactTabsContent } = elements;
+
+contactTabs.on('click', e => {
+  const target = $(e.currentTarget);
+
+  const tab = target.data('tab');
+  const content = $(`.stores__tab--content[data-tab-content=${tab}]`);
+
+  contactTabsContent.removeClass('active');
+  content.addClass('active');
+
+  contactTabs.removeClass('active');
+  target.addClass('active');
 });
 
 //*******************//
