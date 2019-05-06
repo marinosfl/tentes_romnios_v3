@@ -127,7 +127,11 @@ menuPergoles.on('click', async e => {
 //  CONTACT US TABS   //
 //********************//
 
-const { contactTabs, contactTabsContent } = elements;
+const { root, contactTabs, contactTabsContent } = elements;
+
+if (window.location.href === 'http://159.69.107.6/romnios/epikoinonia/') {
+  root.style.setProperty('--max-height', 'auto');
+}
 
 contactTabs.on('click', e => {
   const target = $(e.currentTarget);
