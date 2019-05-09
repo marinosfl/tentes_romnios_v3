@@ -65,6 +65,10 @@ product.on('click', async e => {
     window.location.replace(
       `${window.location.origin}${window.location.pathname}kataskeues`
     );
+  } else if ($(e.currentTarget).hasClass('product__pergoles')) {
+    window.location.replace(
+      `${window.location.origin}${window.location.pathname}pergoles`
+    );
   } else {
     const target = $(e.currentTarget);
     checkProduct(target);
@@ -101,27 +105,27 @@ menuTentes.on('click', async e => {
   }
 });
 
-menuPergoles.on('click', async e => {
-  const { secondProduct } = elements;
+// menuPergoles.on('click', async e => {
+//   const { secondProduct } = elements;
 
-  const target = $(e.currentTarget);
-  $('.sub-menu').hide();
-  target.children('.sub-menu').show();
+//   const target = $(e.currentTarget);
+//   $('.sub-menu').hide();
+//   target.children('.sub-menu').show();
 
-  product.removeClass('active');
-  secondProduct.addClass('active');
+//   product.removeClass('active');
+//   secondProduct.addClass('active');
 
-  checkProduct(secondProduct);
+//   checkProduct(secondProduct);
 
-  arrowBackListener();
+//   arrowBackListener();
 
-  if (
-    window.location.href === 'http://159.69.107.6/romnios/' ||
-    window.location.href === 'http://159.69.107.6/romnios//#!'
-  ) {
-    await fetchTerms();
-  }
-});
+//   if (
+//     window.location.href === 'http://159.69.107.6/romnios/' ||
+//     window.location.href === 'http://159.69.107.6/romnios//#!'
+//   ) {
+//     await fetchTerms();
+//   }
+// });
 
 //********************//
 //  CONTACT US TABS   //

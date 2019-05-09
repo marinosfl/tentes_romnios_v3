@@ -22,6 +22,7 @@
 
     $posts = get_posts(array(
         'post_type' => $post_type,
+        'posts_per_page' => -1,
         'tax_query' => array(
             array(
                 'taxonomy' => $term->taxonomy,
@@ -82,4 +83,4 @@
 </section>
 
 </div>
-<?php get_footer();  ?> 
+<?php get_footer();  ?>
