@@ -5,6 +5,7 @@ import Terms from './models/Terms';
 import PostGallery from './models/PostGallery';
 import { renderTentesTerm, renderPergolesTerm } from './views/termsView';
 import './contactForm';
+import config from './config';
 
 // global state of the app
 const state = {};
@@ -98,8 +99,8 @@ menuTentes.on('click', async e => {
   arrowBackListener();
 
   if (
-    window.location.href === 'http://159.69.107.6/romnios/' ||
-    window.location.href === 'http://159.69.107.6/romnios//#!'
+    window.location.href === config.SERVER_URL ||
+    window.location.href === config.SERVER_URL2
   ) {
     await fetchTerms();
   }
@@ -120,7 +121,7 @@ menuTentes.on('click', async e => {
 //   arrowBackListener();
 
 //   if (
-//     window.location.href === 'http://159.69.107.6/romnios/' ||
+//     window.location.href === config.SERVER_URL ||
 //     window.location.href === 'http://159.69.107.6/romnios//#!'
 //   ) {
 //     await fetchTerms();
@@ -133,7 +134,7 @@ menuTentes.on('click', async e => {
 
 const { root, contactTabs, contactTabsContent } = elements;
 
-if (window.location.href === 'http://159.69.107.6/romnios/epikoinonia/') {
+if (window.location.href === `${config.SERVER_URL}epikoinonia/`) {
   root.style.setProperty('--max-height', 'auto');
 }
 
