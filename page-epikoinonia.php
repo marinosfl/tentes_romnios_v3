@@ -5,11 +5,21 @@
     <section class="who">
       <h3 class="contact__title">ΠΟΙΟΙ ΕΙΜΑΣΤΕ</h3>
       <div class="contact__content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati mollitia saepe, nulla cupiditate aperiam vel blanditiis officiis deleniti, quasi sint facilis iste minus quibusdam fugit? Veritatis incidunt voluptatibus harum atque.</p>
-
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, aut nihil ipsam tenetur modi nulla ipsa. Animi ut praesentium, magnam rerum asperiores nisi nulla eum, iusto accusamus sint iste dolorum.</p>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit veniam dolorem repellat, enim aliquid corporis officia tenetur error dolore voluptas. Iusto suscipit quae perspiciatis tenetur, minima natus ipsa doloribus voluptate?</p>
+        <p>Σας καλωσορίζουμε στην ιστοσελίδα της επιχείρησής μας.</p>
+        <p>Η επιχείρησή μας είναι οικογενειακή και δραστηριοποιείται στον τομέα των συστημάτων σκίασης από το 1964 έχοντας απασχολήσει 3 γενιές ανθρώπων.</p>
+        <p>Η τεχνογνωσία, η συνέπεια, ο επαγγελματισμός και ο σεβασμός στις απαιτήσεις σας, μας βοήθησε να καθιερώσουμε μια σταθερή πελατεία επί σειρά ετών.</p>
+        <p>Αναλαμβάνουμε την μελέτη, κατασκευή και τοποθέτηση τεντών παντός είδους:</p>
+        <ul class="bold contact__list">
+          <li>Με αυτοματισμούς</li>
+          <li>Με βραχίονες</li>
+          <li>Καμπύλες τέντες</li>
+          <li>Συστήματα σκίασης αιθρίων</li>
+          <li>Κατασκευή- Τοποθέτηση Τέντας</li>
+          <li>Κατασκευή- Τοποθέτηση Πέργκολας</li>
+          <li>Ειδικές Κατασκευές</li>
+          <li>Επισκευές τεντων</li>
+        </ul>
+        <p>Χρησιμοποιούμε τεντόπανα <span class="bold">ελληνικά και ευρωπαϊκά,</span> σε ποικιλία χρωμάτων και σχεδίων, με εγγύηση των εταιρειών άλλα και δική μας.</p>
       </div>
     </section>
     <section class="stores">
@@ -108,6 +118,18 @@
               <div class="contact--error-wrapper">
                 <!-- <label for="email">Ε-mail</label> -->
                 <input type="email" id="email" name="email" class="contact--field" placeholder="Ε-mail" />
+              </div>
+            </div>
+            <div class="contact--field-wrapper">
+              <div class="contact--error-wrapper">
+                <!-- <label for="email">Ε-mail</label> -->
+                <input type="text" id="tel" name="tel" class="contact--field" placeholder="Τηλέφωνο" />
+              </div>
+            </div>
+            <div class="contact--field-wrapper">
+              <div class="contact--error-wrapper">
+                <!-- <label for="email">Ε-mail</label> -->
+                <input type="text" id="address" name="address" class="contact--field" placeholder="Διεύθυνση" />
               </div>
             </div>
           </div>

@@ -7,6 +7,8 @@ contactForm.on('submit', e => {
 
   const name = $('[name="name"]').val();
   const email = $('[name="email"]').val();
+  const address = $('[name="address"]').val();
+  const tel = $('[name="tel"]').val();
   const message = $('[name="message"]').val();
 
   const url = `${$('[name="url"]').val()}/contact-ajax.php`;
@@ -15,6 +17,8 @@ contactForm.on('submit', e => {
   const data = {
     name,
     email,
+    address,
+    tel,
     message
   };
 
@@ -23,8 +27,6 @@ contactForm.on('submit', e => {
     type,
     data,
     success: res => {
-      const data = JSON.parse(res);
-      console.log(data);
       $('#contact-form .contact--field').val('');
     }
   });
