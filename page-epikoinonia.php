@@ -2,7 +2,7 @@
 <div class="content-wrapper">
   <?php include('sidebar.php'); ?>
   <div class="contact">
-    <section class="who">
+    <!-- <section class="who">
       <h3 class="contact__title">ΠΟΙΟΙ ΕΙΜΑΣΤΕ</h3>
       <div class="contact__content">
         <p>Σας καλωσορίζουμε στην ιστοσελίδα της επιχείρησής μας.</p>
@@ -21,7 +21,7 @@
         </ul>
         <p>Χρησιμοποιούμε τεντόπανα <span class="bold">ελληνικά και ευρωπαϊκά,</span> σε ποικιλία χρωμάτων και σχεδίων, με εγγύηση των εταιρειών άλλα και δική μας.</p>
       </div>
-    </section>
+    </section> -->
     <section class="stores">
       <div class="contact__title">ΚΑΤΑΣΤΗΜΑΤΑ</div>
       <div class="stores__tabs">
@@ -51,6 +51,12 @@
             </div>
             <div class="contact--info">
               <svg class="contact--icon">
+                <use xlink:href="<?php echo $url ?>/img/icons_sprites.svg#phone" />
+              </svg>
+              <span>210 937 0561</span>
+            </div>
+            <div class="contact--info">
+              <svg class="contact--icon">
                 <use xlink:href="<?php echo $url ?>/img/icons_sprites.svg#mobile" />
               </svg>
               <span>694 851 2600</span>
@@ -76,7 +82,7 @@
               <svg class="contact--icon">
                 <use xlink:href="<?php echo $url ?>/img/icons_sprites.svg#phone" />
               </svg>
-              <span>210 933 0676</span>
+              <span>210 982 0854</span>
             </div>
             <div class="contact--info">
               <svg class="contact--icon">
