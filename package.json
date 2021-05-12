@@ -6,7 +6,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
-    "swiper": "^4.5.0"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
